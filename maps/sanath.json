@@ -1,0 +1,199 @@
+[
+      {
+            "type": "Feature",
+            "properties": {
+                  "@id": "clark_node",
+                  "name": "Clark Street Beach",
+                  "natural": "beach",
+                  "sport": "swimming",
+                  "surface": "sand"
+            },
+            "geometry": {
+                  "type": "Point",
+                  "coordinates": [
+                        -87.6731779,
+                        42.0493142
+                  ]
+            },
+            "id": "1"
+      },
+
+      {
+            "type": "Feature",
+            "properties": {
+                  "@id": "lighthouse_beach_node",
+                  "name": "Lighthouse Beach",
+                  "natural": "beach",
+                  "sport": "swimming",
+                  "surface": "sand"
+            },
+            "geometry": {
+                  "type": "Point",
+                  "coordinates": [
+                        -87.67407,
+                        42.06363
+                  ]
+            },
+            "id": "2"
+      },
+
+      {
+            "type": "Feature",
+            "properties": {
+                  "@id": "arch_node",
+                  "name": "NU Arch",
+                  "natural": "arch",
+                  "sport": "n/a",
+                  "surface": "concrete"
+            },
+            "geometry": {
+                  "type": "Point",
+                  "coordinates": [
+                        -87.676996,
+                        42.051316
+                  ]
+            },
+            "id": "3"
+      },
+
+      {
+            "type": "Feature",
+            "properties": {
+                  "@id": "the_rock_node",
+                  "name": "The Rock",
+                  "natural": "rock",
+                  "sport": "climbing",
+                  "surface": "limestone"
+            },
+            "geometry": {
+                  "type": "Point",
+                  "coordinates": [
+                        -87.67592,
+                        42.05165
+                  ]
+            },
+            "id": "4"
+      },
+
+      {
+            "type": "Feature",
+            "properties": {
+                  "@id": "the_point_node",
+                  "name": "NU Lakefill Point",
+                  "natural": "grass",
+                  "sport": "walking",
+                  "surface": "also grass"
+            },
+            "geometry": {
+                  "type": "Point",
+                  "coordinates": [
+                        -87.669558,
+                        42.052164
+                  ]
+            },
+            "id": "5"
+      },
+
+      {
+            "type": "Feature",
+            "properties": {
+                  "@id": "global_hub_node",
+                  "name": "Kellogg Global Hub",
+                  "natural": "plaza",
+                  "sport": "business",
+                  "surface": "prestige"
+            },
+            "geometry": {
+                  "type": "Point",
+                  "coordinates": [
+                        -87.67196,
+                        42.05708
+                  ]
+            },
+            "id": "6"
+      },
+
+      {
+            "type": "Feature",
+            "properties": {
+                  "@id": "dnd_node",
+                  "name": "DnD's Finer Foods",
+                  "natural": "sustenance"
+            },
+            "geometry": {
+                  "type": "Point",
+                  "coordinates": [
+                        -87.683143,
+                        42.058471
+                  ]
+            },
+            "id": "7"
+      },
+
+      {
+            "type": "Feature",
+            "properties": {
+                  "@id": "behind_bienen_node",
+                  "name": "Bienen School of Music"
+            },
+            "geometry": {
+                  "type": "Point",
+                  "coordinates": [
+                        -87.67110,
+                        42.051802
+                  ]
+            },
+            "id": "8"
+      },
+
+      {
+            "type": "Feature",
+            "properties": {
+                  "@id": "mccolloch_node",
+                  "name": "McColloch M416"
+            },
+            "geometry": {
+                  "type": "Point",
+                  "coordinates": [
+                        -87.675405,
+                        42.059802
+                  ]
+            },
+            "id": "9"
+      },
+
+      {
+            "type": "Feature",
+            "properties": {
+                  "@id": "lunt_node",
+                  "name": "Lunt"
+            },
+            "geometry": {
+                  "type": "Point",
+                  "coordinates": [
+                        -87.676343,
+                        42.054796
+                  ]
+            },
+            "id": "10"
+      },
+
+      {
+            "type": "Feature",
+            "properties": {
+                  "@id": "bean_node",
+                  "name": "The Bean (Chicago)",
+                  "surface": "bonus_find"
+            },
+            "geometry": {
+                  "type": "Point",
+                  "coordinates": [
+                        -87.62299,
+                        41.88263
+                  ]
+            },
+            "id": "bingo bongo bango"
+      }
+
+
+]

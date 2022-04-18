@@ -92,7 +92,7 @@ class InteractiveMap {
 				this.update(count)
 			}
 		}, 100) 
-
+		/*
 		landmarks = []
 		for (var i = 0; i < 10; i++) {
 			let p2 = clonePolarOffset(NU_CENTER, 400*Math.random() + 300, 20*Math.random())
@@ -101,6 +101,7 @@ class InteractiveMap {
 				pos: p2
 			})
 		}
+		*/
 
 		// Starting landmarks
 		this.features = landmarks.map(landmark => {
@@ -260,7 +261,7 @@ class InteractiveMap {
 			json.forEach(landmark => {
 				// console.log(landmark)
 				var marker = new ol.Feature({
-					name: "TEST",
+					name: landmark.properties.name,
 					// Convert to non-latlon
 					geometry: new ol.geom.Point(ol.proj.fromLonLat(landmark.geometry.coordinates))
 				});

@@ -44,7 +44,7 @@ let map = new InteractiveMap({
 	}
 })
 
-map.loadLandmarks("landmarks-natural-nu", (landmark) => {
+map.loadLandmarks("sanath", (landmark) => {
 	// Keep this landmark?
 	return true
 	// return landmark.properties.amenity || landmark.properties.store
