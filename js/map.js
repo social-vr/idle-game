@@ -123,7 +123,36 @@ class InteractiveMap {
 				this.baseUpdate(count)
 				this.update(count)
 			}
-		}, UPDATE_RATE) 
+		}, 100) 
+		/*
+		landmarks = []
+		for (var i = 0; i < 10; i++) {
+			let p2 = clonePolarOffset(NU_CENTER, 400*Math.random() + 300, 20*Math.random())
+			landmarks.push({
+				name: words.getRandomWord(),
+				pos: p2
+			})
+		}
+		*/
+
+		// Starting landmarks
+		this.features = landmarks.map(landmark => {
+			let marker = new ol.Feature({
+				geometry: new ol.geom.Point(landmark.pos),
+				name: landmark.name,
+			})
+			landmarkToMarker(marker)
+			return marker
+		})
+
+		// Player location
+		this.userLocation = this.center.slice()
+		this.playerMarker = new ol.Feature({
+			geometry: new ol.geom.Point(this.userLocation),
+			name: "PLAYER",
+		})
+		this.features.push(this.playerMarker)
+
 
 		
 		// 

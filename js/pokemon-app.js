@@ -134,8 +134,11 @@ let map = new InteractiveMap({
 			noBG: false // skip the background
 		}
 	},
-
-	
+})
+map.loadLandmarks("sanath", (landmark) => {
+	// Keep this landmark?
+	return true
+	// return landmark.properties.amenity || landmark.properties.store
 })
 
 
