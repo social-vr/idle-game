@@ -1,6 +1,7 @@
 [
       {
             "type": "Feature",
+            "points": 5,
             "properties": {
                   "@id": "clark_node",
                   "name": "Clark Street Beach",
@@ -20,6 +21,7 @@
 
       {
             "type": "Feature",
+             "points": 5,
             "properties": {
                   "@id": "lighthouse_beach_node",
                   "name": "Lighthouse Beach",
@@ -39,6 +41,7 @@
 
       {
             "type": "Feature",
+            "points": 1,
             "properties": {
                   "@id": "arch_node",
                   "name": "NU Arch",
@@ -58,6 +61,7 @@
 
       {
             "type": "Feature",
+            "points": 1,
             "properties": {
                   "@id": "the_rock_node",
                   "name": "The Rock",
@@ -77,6 +81,7 @@
 
       {
             "type": "Feature",
+            "points": 1,
             "properties": {
                   "@id": "the_point_node",
                   "name": "NU Lakefill Point",
@@ -96,6 +101,7 @@
 
       {
             "type": "Feature",
+            "points": 2,
             "properties": {
                   "@id": "global_hub_node",
                   "name": "Kellogg Global Hub",
@@ -115,6 +121,7 @@
 
       {
             "type": "Feature",
+            "points": 7,
             "properties": {
                   "@id": "dnd_node",
                   "name": "DnD's Finer Foods",
@@ -132,6 +139,7 @@
 
       {
             "type": "Feature",
+            "points": 1,
             "properties": {
                   "@id": "behind_bienen_node",
                   "name": "Bienen School of Music"
@@ -148,6 +156,7 @@
 
       {
             "type": "Feature",
+            "points": 2,
             "properties": {
                   "@id": "mccolloch_node",
                   "name": "McColloch M416"
@@ -164,6 +173,7 @@
 
       {
             "type": "Feature",
+            "points": 2,
             "properties": {
                   "@id": "lunt_node",
                   "name": "Lunt"
@@ -180,6 +190,7 @@
 
       {
             "type": "Feature",
+            "points": 100,
             "properties": {
                   "@id": "bean_node",
                   "name": "The Bean (Chicago)",
