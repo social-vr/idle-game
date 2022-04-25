@@ -73,7 +73,7 @@ let map = new InteractiveMap({
 
 		console.log("enter", landmark.name, newLevel)
 		if (newLevel == 2) {
-			document.getElementById("test").style = ""
+			document.getElementById("location-buttons").style = ""
 			// Add points to my gamestate
 
 			// Have we captured this?

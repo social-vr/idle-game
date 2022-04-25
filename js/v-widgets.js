@@ -146,17 +146,25 @@ const roomWidget = {
 
 const directionWidget = {
 	template: `
-		<div id="test" style="display:none">
-		<button @click="testFuction = !testFunction"> north </button>
-		<button> east </button>
-		<button> south </button>
-		<button> west </button>
+		<div id="location-buttons" style="display:none">
+		<button @click="testFunction('north')"> north </button>
+		<button @click="testFunction('east')"> east </button>
+		<button @click="testFunction('south')"> south </button>
+		<button @click="testFunction('west')"> west </button>
 		</div>
 	`,
 
 	methods: {
-		testFunction() {
-			console.log("hello world")
+		testFunction(guess) {
+			console.log(this.guess)
+			console.log(guess)
+			this.guess = guess
+			console.log(this.guess)
+
 		}
-	}
+	},
+
+	props: {
+		"guess" : ""
+	},
 }
