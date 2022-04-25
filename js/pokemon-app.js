@@ -30,29 +30,19 @@ let map = new InteractiveMap({
 	ranges: [500, 200, 90, 1], // must be in reverse order
 
 	initializeMap() {
-		// A good place to load landmarks
-		this.loadLandmarks("landmarks-shop-evanston", (landmark) => {
-			// Keep this landmark?
-
-			// Keep all landmarks in the set
-			return true
-
-			// Only keep this landmark if its a store or amenity, e.g.
-			// return landmark.properties.amenity || landmark.properties.store
-		})
 
 		// Create random landmarks
 		// You can also use this to create trails or clusters for the user to find
-		for (var i = 0; i < 10; i++) {
+		// for (var i = 0; i < 10; i++) {
 
-			// make a polar offset (radius, theta) 
-			// from the map's center (units are *approximately* meters)
-			let position = clonePolarOffset(NU_CENTER, 400*Math.random() + 300, 20*Math.random())
-			this.createLandmark({
-				pos: position,
-				name: words.getRandomWord(),
-			})
-		}
+		// 	// make a polar offset (radius, theta) 
+		// 	// from the map's center (units are *approximately* meters)
+		// 	let position = clonePolarOffset(NU_CENTER, 400*Math.random() + 300, 20*Math.random())
+		// 	// this.createLandmark({
+		// 	// 	pos: position,
+		// 	// 	name: words.getRandomWord(),
+		// 	// })
+		// }
 	},
 
 	update() {
@@ -64,7 +54,7 @@ let map = new InteractiveMap({
 
 		// Any openmap data?
 		if (landmark.openMapData) {
-			console.log(landmark.openMapData)
+			// console.log(landmark.openMapData)
 			landmark.name = landmark.openMapData.name
 		}
 		
@@ -74,7 +64,7 @@ let map = new InteractiveMap({
 		landmark.color = [Math.random(), 1, .5]
 
 		// Give it a random number of points
-		landmark.points = Math.floor(Math.random()*10 + 1)
+    landmark.points = Math.floor(Math.random()*10 + 1)
 		return landmark
 	}, 
 
@@ -86,12 +76,11 @@ let map = new InteractiveMap({
 		if (newLevel == 2) {
 
 			// Add points to my gamestate
-			gameState.points += landmark.points
-
-			
 
 			// Have we captured this?
-			if (!gameState.captured.includes(landmark.name)) {
+      last_captured = gameState.captured.length > 0 ? gameState.captured[gameState.captured.length - 1] : ""
+			if (landmark.name !== last_captured) {
+        gameState.points += landmark.points
 				gameState.captured.push(landmark.name)
 				// Add a message
 				gameState.messages.push(`You captured ${landmark.name} for ${landmark.points} points`)
@@ -153,7 +142,7 @@ window.onload = (event) => {
 			<div id="main-columns">
 
 				<div class="main-column" style="flex:1;overflow:scroll;max-height:200px">
-					(TODO, add your own gamestate)
+
 					{{gameState}}
 					
 				</div>
