@@ -17,8 +17,12 @@ let landmarkCount = 0
 let gameState = {
 	points: 0,
 	captured: [],
+	currLandmark: "",
+	guessed: false,
 	messages: []
 }
+
+let correctDirection = -1;
 
 // Create an interactive map
 // Change any of these functions
@@ -72,8 +76,13 @@ let map = new InteractiveMap({
 		// -1 is not in any range
 
 		console.log("enter", landmark.name, newLevel)
+		// Update gameState
+		gameState.guessed = false
+		gameState.currLandmark = landmark.name
+		correctDirection = landmark.correct_direction
 		if (newLevel == 2) {
 			document.getElementById("location-buttons").style = ""
+			
 			// Add points to my gamestate
 
 			// Have we captured this?
@@ -122,8 +131,18 @@ let map = new InteractiveMap({
 		}
 	},
   enterGuess: (guess) => {
-    //TODO: Handle points for guessing
-    console.log(guess)
+	if (!gameState.guessed) {
+		directions = ["north", "east", "south", "west"]
+		if (directions[correctDirection] == guess) {
+			gameState.messages.push(`Correct view guessed at ${gameState.currLandmark} for 3 points`)
+			gameState.points += 3
+		}
+		else {
+			gameState.messages.push(`Incorrect view guessed at ${gameState.currLandmark}, try again next time!`)
+		}
+		gameState.guessed = true
+		document.getElementById("location-buttons").style = "display:none"
+	}
   },
 })
 map.loadLandmarks("sanath", (landmark) => {
@@ -143,7 +162,7 @@ window.onload = (event) => {
 		<header></header>
 			<div id="main-columns">
 
-				<div class="main-column" style="flex:1;overflow:scroll;max-height:200px">
+				<div class="main-column" style="flex:1;overflow:scroll;max-height:500px">
 
 					{{gameState}}
 

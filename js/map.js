@@ -314,7 +314,8 @@ class InteractiveMap {
 				let landmark = {
 					pos: ol.proj.fromLonLat(data.geometry.coordinates),
 					src: landmark_set,
-          points: data.points
+          			points: data.points,
+					correct_direction: data.correct_direction
 				}
 				
 				landmark.openMapData = data.properties

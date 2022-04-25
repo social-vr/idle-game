@@ -147,6 +147,7 @@ const roomWidget = {
 const directionWidget = {
 	template: `
 		<div id="location-buttons" style="display:none">
+		<h4> Guess which direction has the best view from your current landmark! </h4>
 		<button @click="map.enterGuess('north')"> north </button>
 		<button @click="map.enterGuess('east')"> east </button>
 		<button @click="map.enterGuess('south')"> south </button>
