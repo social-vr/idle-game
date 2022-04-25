@@ -73,7 +73,7 @@ let map = new InteractiveMap({
 
 		console.log("enter", landmark.name, newLevel)
 		if (newLevel == 2) {
-
+			document.getElementById("test").style = ""
 			// Add points to my gamestate
 
 			// Have we captured this?
@@ -143,6 +143,8 @@ window.onload = (event) => {
 				<div class="main-column" style="flex:1;overflow:scroll;max-height:200px">
 
 					{{gameState}}
+
+					<direction-widget />
 					
 				</div>
 
@@ -168,6 +170,7 @@ window.onload = (event) => {
 			// "user-widget": userWidget,
 			// "room-widget": roomWidget,
 			"location-widget": locationWidget,
+			"direction-widget" : directionWidget,
 		}),
 
 		el: "#app"
