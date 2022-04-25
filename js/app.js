@@ -123,6 +123,10 @@ window.onload = (event) => {
 				this.$refs.message.value = ""
 				this.room.sendMessage(msg)
 			},
+
+      handleMessage(ev, v) {
+        console.log(`From child ${v}`)
+      },
 			
 			post() {
 				this.room.postMessage(words.getRandomWord())

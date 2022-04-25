@@ -147,24 +147,13 @@ const roomWidget = {
 const directionWidget = {
 	template: `
 		<div id="location-buttons" style="display:none">
-		<button @click="testFunction('north')"> north </button>
-		<button @click="testFunction('east')"> east </button>
-		<button @click="testFunction('south')"> south </button>
-		<button @click="testFunction('west')"> west </button>
+		<button @click="map.enterGuess('north')"> north </button>
+		<button @click="map.enterGuess('east')"> east </button>
+		<button @click="map.enterGuess('south')"> south </button>
+		<button @click="map.enterGuess('west')"> west </button>
 		</div>
 	`,
 
-	methods: {
-		testFunction(guess) {
-			console.log(this.guess)
-			console.log(guess)
-			this.guess = guess
-			console.log(this.guess)
 
-		}
-	},
-
-	props: {
-		"guess" : ""
-	},
+	props: ["map"]
 }

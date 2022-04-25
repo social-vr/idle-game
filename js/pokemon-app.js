@@ -95,7 +95,6 @@ let map = new InteractiveMap({
 		console.log("exit", landmark.name, newLevel)
 	},
 	
-	
 	featureToStyle: (landmark) => {
 		// How should we draw this landmark?
 		// Returns an object used to set up the drawing
@@ -122,6 +121,10 @@ let map = new InteractiveMap({
 			noBG: false // skip the background
 		}
 	},
+  enterGuess: (guess) => {
+    //TODO: Handle points for guessing
+    console.log(guess)
+  },
 })
 map.loadLandmarks("sanath", (landmark) => {
 	// Keep this landmark?
@@ -144,7 +147,7 @@ window.onload = (event) => {
 
 					{{gameState}}
 
-					<direction-widget />
+					<direction-widget :map="map"/>
 					
 				</div>
 

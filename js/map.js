@@ -96,7 +96,7 @@ let noise = new SimplexNoise()
 // A map made out of openlayers data and ..landmarks?
 
 class InteractiveMap {
-	constructor({ranges, featureToStyle, mapCenter, landmarks, initializeMap, initializeLandmark, update, onEnterRange, onExitRange}) {
+	constructor({ranges, featureToStyle, mapCenter, landmarks, initializeMap, initializeLandmark, update, onEnterRange, onExitRange, enterGuess}) {
 		this.update = update
 		this.center = mapCenter
 		this.ranges = ranges
@@ -106,7 +106,7 @@ class InteractiveMap {
 		this.initializeLandmark = initializeLandmark
 		this.onEnterRange = onEnterRange
 		this.onExitRange = onExitRange
-
+    this.enterGuess = enterGuess
 		// this.landmarkToMarker = landmarkToMarker
 		
 		this.landmarks = []
