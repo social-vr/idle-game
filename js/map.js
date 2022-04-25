@@ -311,10 +311,10 @@ class InteractiveMap {
 
 			// Deal with the loaded landmarks
 			json.forEach(data => {
-				
 				let landmark = {
 					pos: ol.proj.fromLonLat(data.geometry.coordinates),
-					src: landmark_set
+					src: landmark_set,
+          points: data.points
 				}
 				
 				landmark.openMapData = data.properties

@@ -57,14 +57,13 @@ let map = new InteractiveMap({
 			// console.log(landmark.openMapData)
 			landmark.name = landmark.openMapData.name
 		}
-		
 		// *You* decide how to create a marker
 		// These aren't used, but could be examples
 		landmark.idNumber = landmarkCount++
 		landmark.color = [Math.random(), 1, .5]
 
 		// Give it a random number of points
-    landmark.points = Math.floor(Math.random()*10 + 1)
+    // landmark.points = Math.floor(Math.random()*10 + 1)
 		return landmark
 	}, 
 
